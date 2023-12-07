@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
+import { data } from './Context';
+import Loginf from './Loginf';
+import Profile from './Profile';
+
 
 function App() {
+  let {clr}=useContext(data)
+  console.log(clr);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 style={{}}>VIDHIKA</h1>
+      <Loginf/>
+      <Profile/>
     </div>
   );
 }
