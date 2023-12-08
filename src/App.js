@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import './App.css';
 import { data } from './Context';
-import Loginf from './Loginf';
-import Profile from './Profile';
+import Nav from './components/Nav';
+import AllRoutes from './routes/AllRoutes';
 
 
 function App() {
@@ -10,9 +10,8 @@ function App() {
   console.log(clr);
   return (
     <div>
-      <h1 style={{}}>VIDHIKA</h1>
-      <Loginf/>
-      <Profile/>
+      <Nav/>
+      <AllRoutes/>
     </div>
   );
 }

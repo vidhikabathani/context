@@ -1,12 +1,14 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 
 export let data=createContext()
 
-const Context=(children)=> {
-    let clr={
-        color:"teal"
+const Context=({children})=> {
+    let[name,setName]=useState("")
+
+    const upName=(val)=>{
+        setName(val);
     }
-    return <data.Provider value={{clr}}>{children}</data.Provider>
+    return <data.Provider value={{name,upName}}>{children}</data.Provider>
 }
 
 export default Context

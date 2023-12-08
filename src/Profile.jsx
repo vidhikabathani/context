@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { data } from './Context'
 
 function Profile() {
     let{name}=useContext(data)
